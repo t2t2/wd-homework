@@ -1,0 +1,43 @@
+.primary-sidebar {
+	width: 4rem;
+	flex: 0 0 4rem;
+
+	.nav {
+		box-shadow: inset -1rem 0 0.5rem -0.5rem rgba(0, 0, 0, 0.05);
+	}
+
+	.nav-link {
+		padding: 1em 0.25em;
+		text-align: center;
+		font-size: 0.8em;
+
+		.icon {
+			display: block;
+			font-size: 1.5rem;
+			font-weight: normal;
+		}
+
+		&.active {
+			background: theme-color("light");
+			font-weight: bold;
+		}
+	}
+
+}
+.secondary-sidebar {
+	background: theme-color("light");
+	color: #999999;
+	flex: 0 0 16rem;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	width: 16rem;
+}
+.top-bar {
+	background: rgba(255, 255, 255, 0.9);
+	border-bottom: 1px solid #eceff1;
+	color: #999999;
+	margin: 0 ($grid-gutter-width / -2);
+	padding: ($spacer * 0.5) ($grid-gutter-width / 2);
+	text-align: center;
+}
+
