@@ -7,9 +7,10 @@
 	}
 
 	.nav-link {
+		font-size: 0.8em;
+		color: rgba(255, 255, 255, 0.7);
 		padding: 1em 0.25em;
 		text-align: center;
-		font-size: 0.8em;
 
 		.icon {
 			display: block;
@@ -17,8 +18,12 @@
 			font-weight: normal;
 		}
 
+		&:hover {
+			color: rgba(255, 255, 255, 1);
+		}
 		&.active {
 			background: theme-color("light");
+			color: theme-color("primary");
 			font-weight: bold;
 		}
 	}
@@ -26,11 +31,12 @@
 }
 .secondary-sidebar {
 	background: theme-color("light");
+	box-shadow: inset -1rem 0 0.5rem -0.5rem rgba(0, 0, 0, 0.05);
 	color: #999999;
-	flex: 0 0 16rem;
+	flex: 0 0 14rem;
 	overflow-y: auto;
 	scrollbar-width: thin;
-	width: 16rem;
+	width: 14rem;
 }
 .top-bar {
 	background: rgba(255, 255, 255, 0.9);
@@ -39,5 +45,27 @@
 	margin: 0 ($grid-gutter-width / -2);
 	padding: ($spacer * 0.5) ($grid-gutter-width / 2);
 	text-align: center;
+}
+.page-header {
+	margin: 0 ($grid-gutter-width / -2);
+	padding: ($spacer * 0.5) ($grid-gutter-width / 2) 0;
+
+	.nav.nav-underline {
+		font-size: 0.7em;
+
+		.nav-link {
+			border-bottom: 0.2rem solid transparent;
+			color: #666666;
+			margin-bottom: -0.2rem;
+			text-transform: uppercase;
+
+			transition: 0.2s border-bottom-color;
+
+			&:hover,
+			&.active {
+				border-bottom-color: theme-color("primary");
+			}
+		}
+	}
 }
 
