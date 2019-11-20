@@ -37,6 +37,8 @@
 				</ul>
 			</div>
 		</header>
-		<router-view />
+		<div class="container">
+			<router-view />
+		</div>
 	</div>
 </template>

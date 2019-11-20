@@ -1,10 +1,15 @@
 $theme-colors: (
-	"secondary": #455a64
+	"secondary": #455a64,
+	"success": #4cae4f,
+	"warning": #ff9800,
+	"dark-warning": #f57c00,
+	"dark-error": #d32f2f
 );
 
 @import "~bootstrap/scss/bootstrap";
 
 @import "layout";
 
+@import "components/avatar-circle";
 @import "components/tag-card";
 

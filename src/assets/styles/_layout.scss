@@ -43,12 +43,12 @@
 	border-bottom: 1px solid #eceff1;
 	color: #999999;
 	margin: 0 ($grid-gutter-width / -2);
-	padding: ($spacer * 0.5) ($grid-gutter-width / 2);
+	padding: ($spacer / 2) ($grid-gutter-width / 2);
 	text-align: center;
 }
 .page-header {
 	margin: 0 ($grid-gutter-width / -2);
-	padding: ($spacer * 0.5) ($grid-gutter-width / 2) 0;
+	padding: ($spacer / 2) ($grid-gutter-width / 2) 0;
 
 	.nav.nav-underline {
 		font-size: 0.7em;

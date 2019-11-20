@@ -1,3 +1,47 @@
 .tag-card {
-	border-bottom: 1px solid #cccccc;
+	border-width: 0;
+	border-color: #eeeeee;
+	margin-bottom: $spacer;
+
+	&.opened {
+		box-shadow: 0 0.125em 0.2em rgba(0, 0, 0, 0.1);
+	}
+
+	.tag-progress {
+		align-items: stretch;
+		border-bottom: 1px solid #eeeeee;
+		margin: 0;
+
+		.progress {
+			border-bottom-left-radius: 0;
+			border-bottom-right-radius: 0;
+			height: auto;
+		}
+	}
+	.progress {
+		position: relative;
+
+		.marker {
+			background-color: #999999;
+			height: 8px;
+			position: absolute;
+			transform: rotate(45deg);
+			transform-origin: center;
+			width: 8px;
+			top: calc(50% - 4px);
+		}
+	}
+
+	.tag-progress-label {
+		box-sizing: content-box;
+		width: 3em;
+		font-size: 0.7em;
+		padding: 0 ($spacer / 2);
+	}
+
+	.card-header {
+		background-color: rgba(0, 0, 0, 0.02);
+		font-size: 1em;
+		font-weight: 600;
+	}
 }
