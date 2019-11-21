@@ -2,7 +2,7 @@
 	<div>
 		<header class="page-header pt-2 shadow-sm">
 			<div class="container">
-				<div class="row align-items-center justify-content-between mx-0 my-2">
+				<div class="row align-items-center justify-content-between my-2">
 					<div class="col col-auto">
 						<h4>Company</h4>
 					</div>

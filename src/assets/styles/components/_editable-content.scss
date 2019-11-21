@@ -1,0 +1,27 @@
+.editable-content {
+	align-items: center;
+	display: flex;
+	margin-bottom: $spacer;
+
+	& > p {
+		margin-bottom: 0;
+	}
+	.editable-icon {
+		visibility: hidden;
+	}
+
+	&:hover {
+		background-color: rgba(127, 191, 255, 0.1);
+		cursor: pointer;
+
+		.editable-icon {
+			visibility: visible;
+		}
+	}
+
+	&.active {
+		align-items: stretch;
+		background-color: rgba(127, 191, 255, 0.15);
+		cursor: auto;
+	}
+}

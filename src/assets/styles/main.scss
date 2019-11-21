@@ -11,5 +11,12 @@ $theme-colors: (
 @import "layout";
 
 @import "components/avatar-circle";
+@import "components/editable-content";
 @import "components/tag-card";
 
+.not-implemented {
+	cursor: not-allowed !important;
+}
+.text-sm {
+	font-size: 0.7em;
+}

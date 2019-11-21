@@ -10,12 +10,12 @@
 			>
 				<FontAwesomeIcon
 					icon="caret-down"
-					:rotation="isOpen ? 180 : 0"
+					:rotation="isOpen ? 180 : null"
 				/>
 			</button>
-			<a
+			<RouterLink
+				:to="{name: 'tags.view', params: {tagSlug: tag.name}}"
 				class="col-4 align-self-stretch text-reset d-flex flex-column justify-content-center"
-				href="#"
 			>
 				<div
 					class="text-truncate"
@@ -23,7 +23,7 @@
 				>
 					<span class="text-black-50">#</span>{{ tag.name }}
 				</div>
-			</a>
+			</RouterLink>
 			<div class="col overflow-hidden text-muted">
 				<div class="text-truncate">
 					{{ tag.description }}
@@ -31,7 +31,7 @@
 			</div>
 			<button
 				:class="[tag.important ? 'text-primary' : 'text-black-50']"
-				class="col-auto btn"
+				class="col-auto btn not-implemented"
 			>
 				<FontAwesomeIcon
 					icon="thumbtack"
@@ -79,7 +79,7 @@
 			</h6>
 			<div class="card-body">
 				<div class="row align-items-center mb-2">
-					<div class="col-auto">
+					<div class="col-auto pr-0">
 						<div class="avatar-circle">
 							U1
 						</div>
@@ -99,7 +99,7 @@
 					</div>
 				</div>
 				<div class="row align-items-center mb-2">
-					<div class="col-auto">
+					<div class="col-auto pr-0">
 						<div class="avatar-circle">
 							U2
 						</div>
@@ -119,7 +119,7 @@
 					</div>
 				</div>
 				<div class="row align-items-center mb-2">
-					<div class="col-auto">
+					<div class="col-auto pr-0">
 						<div class="avatar-circle">
 							U3
 						</div>
@@ -145,14 +145,14 @@
 			<div class="card-body">
 				<div class="row align-items-center mb-2">
 					<div class="col-5">
-						<a href="javascript:void(0)">Shoot the moon</a>
+						<a href="javascript:void(0)">Shoot the moon #{{ tag.name }}</a>
 					</div>
 					<div class="col">
 						<ObjectiveProgressBar
 							:value="20"
 						/>
 					</div>
-					<button class="col-auto btn btn-link">
+					<button class="col-auto btn btn-link not-implemented">
 						KR
 						<FontAwesomeIcon
 							icon="caret-down"
@@ -161,14 +161,14 @@
 				</div>
 				<div class="row align-items-center mb-2">
 					<div class="col-5">
-						<a href="javascript:void(0)">Get points</a>
+						<a href="javascript:void(0)">Get points #{{ tag.name }}</a>
 					</div>
 					<div class="col">
 						<ObjectiveProgressBar
 							:value="50"
 						/>
 					</div>
-					<button class="col-auto btn btn-link">
+					<button class="col-auto btn btn-link not-implemented">
 						KR
 						<FontAwesomeIcon
 							icon="caret-down"

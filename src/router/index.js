@@ -3,7 +3,8 @@ import VueRouter from 'vue-router'
 
 import Home from './views/home.vue'
 import TagsWrapper from './views/tags'
-import TagsList from './views/tags/list'
+import TagList from './views/tags/list'
+import TagView from './views/tags/view'
 
 Vue.use(VueRouter)
 /**
@@ -15,9 +16,15 @@ const routes = [
 		component: TagsWrapper,
 		children: [
 			{
+				path: ':tagSlug',
+				name: 'tags.view',
+				component: TagView,
+				props: true
+			},
+			{
 				path: '/',
 				name: 'tags.list',
-				component: TagsList
+				component: TagList
 			}
 		]
 	},
