@@ -17,6 +17,8 @@ jobs:
         node-version: '12.x'
     - run: npm ci
     - run: npm run build
+      env:
+        BUILD_HOMEPAGE: '/wd-homework/'
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@2.0.3
       env:
