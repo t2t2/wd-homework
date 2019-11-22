@@ -15,7 +15,7 @@
 			</button>
 			<RouterLink
 				:to="{name: 'tags.view', params: {tagSlug: tag.name}}"
-				class="col-4 align-self-stretch text-reset d-flex flex-column justify-content-center"
+				class="col col-sm-4 align-self-stretch text-reset d-flex flex-column justify-content-center"
 			>
 				<div
 					class="text-truncate"
@@ -24,7 +24,7 @@
 					<span class="text-black-50">#</span>{{ tag.name }}
 				</div>
 			</RouterLink>
-			<div class="col overflow-hidden text-muted">
+			<div class="col d-none d-sm-block overflow-hidden text-muted">
 				<div class="text-truncate">
 					{{ tag.description }}
 				</div>
@@ -87,7 +87,7 @@
 					<div class="col-4">
 						<a href="javascript:void(0)">User 1</a>
 					</div>
-					<div class="col">
+					<div class="col-12 col-sm mt-1 mt-sm-0">
 						<TasksProgressBar
 							:values="{
 								planned: 2,
@@ -107,7 +107,7 @@
 					<div class="col-4">
 						<a href="javascript:void(0)">User 2</a>
 					</div>
-					<div class="col">
+					<div class="col-12 col-sm mt-1 mt-sm-0">
 						<TasksProgressBar
 							:values="{
 								planned: 1,
@@ -127,7 +127,7 @@
 					<div class="col-4">
 						<a href="javascript:void(0)">User 3</a>
 					</div>
-					<div class="col">
+					<div class="col-12 col-sm mt-1 mt-sm-0">
 						<TasksProgressBar
 							:values="{
 								planned: 1,
@@ -144,7 +144,7 @@
 			</h6>
 			<div class="card-body">
 				<div class="row align-items-center mb-2">
-					<div class="col-5">
+					<div class="col-12 col-sm-5">
 						<a href="javascript:void(0)">Shoot the moon #{{ tag.name }}</a>
 					</div>
 					<div class="col">
@@ -160,7 +160,7 @@
 					</button>
 				</div>
 				<div class="row align-items-center mb-2">
-					<div class="col-5">
+					<div class="col-12 col-sm-5">
 						<a href="javascript:void(0)">Get points #{{ tag.name }}</a>
 					</div>
 					<div class="col">

@@ -10,7 +10,7 @@
 		<h4>Quarterly Objectives</h4>
 		<div class="pb-2">
 			<div class="row align-items-center mb-2">
-				<div class="col-5">
+				<div class="col-12 col-sm-5">
 					<a href="javascript:void(0)">Shoot the moon #{{ tag.name }}</a>
 				</div>
 				<div class="col">
@@ -36,7 +36,7 @@
 				</button>
 			</div>
 			<div class="row align-items-center mb-2">
-				<div class="col-5">
+				<div class="col-12 col-sm-5">
 					<a href="javascript:void(0)">Get points #{{ tag.name }}</a>
 				</div>
 				<div class="col">

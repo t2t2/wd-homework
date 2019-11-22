@@ -107,7 +107,7 @@
 				<h4>Quarterly Objectives</h4>
 				<div class="pb-2">
 					<div class="row align-items-center mb-2">
-						<div class="col-5">
+						<div class="col-12 col-sm-5">
 							<a href="javascript:void(0)">Design better #projects-support</a>
 						</div>
 						<div class="col">
@@ -133,7 +133,7 @@
 						</button>
 					</div>
 					<div class="row align-items-center mb-2">
-						<div class="col-5">
+						<div class="col-12 col-sm-5">
 							<a href="javascript:void(0)">Get points #projects-support</a>
 						</div>
 						<div class="col">
@@ -178,7 +178,7 @@
 					</div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col">
+							<div class="col-12 col-lg">
 								<h5 class="mb-3">
 									Plans
 								</h5>
@@ -194,7 +194,7 @@
 									value="Small thing to improve #projects-support"
 								/>
 							</div>
-							<div class="col">
+							<div class="col-12 col-lg">
 								<h5 class="mb-3">
 									Problems
 								</h5>
@@ -230,7 +230,7 @@
 					</div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col">
+							<div class="col-12 col-lg">
 								<h5 class="mb-3">
 									Plans
 								</h5>
@@ -251,7 +251,7 @@
 									value="Fill out more tasks to accomplish #projects-support"
 								/>
 							</div>
-							<div class="col">
+							<div class="col-12 col-lg">
 								<h5 class="mb-3">
 									Problems
 								</h5>
@@ -285,7 +285,7 @@
 					</div>
 					<div class="card-body">
 						<div class="row">
-							<div class="col">
+							<div class="col-12 col-lg">
 								<h5 class="mb-3">
 									Plans
 								</h5>
@@ -296,7 +296,7 @@
 									value="Support greater projects #projects-support"
 								/>
 							</div>
-							<div class="col">
+							<div class="col-12 col-lg">
 								<h5 class="mb-3">
 									Problems
 								</h5>

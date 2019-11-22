@@ -33,7 +33,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col secondary-sidebar sticky-top vh-100">
+			<div class="col secondary-sidebar sticky-top vh-100 d-none d-md-block">
 				<p class="py-2">
 					(sidebar)
 				</p>
