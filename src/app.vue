@@ -22,6 +22,15 @@
 							Tags
 						</router-link>
 					</li>
+					<li class="nav-item">
+						<router-link
+							:to="{name: 'projects.view'}"
+							class="nav-link"
+						>
+							<span class="icon">3</span>
+							Project
+						</router-link>
+					</li>
 				</ul>
 			</div>
 			<div class="col secondary-sidebar sticky-top vh-100">

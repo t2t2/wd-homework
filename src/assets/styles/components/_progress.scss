@@ -1,0 +1,14 @@
+.progress {
+	position: relative;
+
+	.marker {
+		background-color: #bbbbbb;
+		height: 6px;
+		position: absolute;
+		transform: rotate(45deg);
+		transform-origin: center;
+		width: 6px;
+		margin-left: -3px;
+		top: calc(50% - 3px);
+	}
+}

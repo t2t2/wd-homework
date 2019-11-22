@@ -1,6 +1,9 @@
 <template>
 	<div class="row align-items-center mb-2">
-		<div class="col-auto pr-0">
+		<div
+			v-if="avatarText"
+			class="col-auto pr-0"
+		>
 			<div
 				class="avatar-circle"
 				title="User"
@@ -12,7 +15,7 @@
 			{{ value }}
 		</div>
 		<button
-			v-if="type !== 2"
+			v-if="!hideActions && type !== 2"
 			class="col-auto btn btn-link text-black-50 not-implemented"
 			title="To Plans"
 		>
@@ -22,7 +25,7 @@
 			/>
 		</button>
 		<button
-			v-if="type !== 1"
+			v-if="!hideActions && type !== 1"
 			class="col-auto btn btn-link text-black-50 not-implemented"
 			title="Done"
 		>
@@ -32,7 +35,7 @@
 			/>
 		</button>
 		<button
-			v-if="type !== 3"
+			v-if="!hideActions && type !== 3"
 			class="col-auto btn btn-link text-black-50 not-implemented"
 			title="To Problems"
 		>
@@ -55,7 +58,11 @@ export default {
 	props: {
 		avatarText: {
 			type: String,
-			required: true
+			default: null
+		},
+		hideActions: {
+			type: Boolean,
+			default: false
 		},
 		type: {
 			type: Number,

@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 
 import Home from './views/home.vue'
-import TagsWrapper from './views/tags'
+import ProjectView from './views/projects/view'
+import TagsLayout from './views/tags/_layout'
 import TagList from './views/tags/list'
 import TagView from './views/tags/view'
 
@@ -13,7 +14,7 @@ Vue.use(VueRouter)
 const routes = [
 	{
 		path: '/tags',
-		component: TagsWrapper,
+		component: TagsLayout,
 		children: [
 			{
 				path: ':tagSlug',
@@ -27,6 +28,11 @@ const routes = [
 				component: TagList
 			}
 		]
+	},
+	{
+		path: '/project',
+		name: 'projects.view',
+		component: ProjectView
 	},
 	{
 		path: '/',

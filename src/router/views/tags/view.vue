@@ -65,7 +65,7 @@
 
 		<h4>Weekly Objectives</h4>
 		<TasksProgressBar
-			:values="tag.tasks"
+			:values="{planned: 2, overdue: 0, accomplishments: 1, negatives: 1}"
 			class="mb-3"
 		/>
 

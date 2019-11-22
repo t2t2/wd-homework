@@ -1,10 +1,20 @@
 .avatar-circle {
 	background-color: #3182CE;
+	border: 2px solid #ffffff;
 	border-radius: 9999px;
 	color: #ffffff;
 	font-size: 9px;
-	height: 24px;
+	display: inline-block;
+	height: 28px;
 	line-height: 24px;
 	text-align: center;
-	width: 24px;
+	width: 28px;
+}
+
+.avatars-list {
+	display: flex;
+
+	.avatar-circle {
+		margin-left: -8px;
+	}
 }
