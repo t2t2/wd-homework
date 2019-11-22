@@ -21,22 +21,73 @@
 							</div>
 						</div>
 						<div class="col-auto">
-							<button class="btn btn-light">
+							<template v-if="editing">
+								<button
+									key="save"
+									class="btn btn-outline-primary mr-2"
+									@click="update"
+								>
+									Done
+								</button>
+								<button
+									key="cancel"
+									class="btn btn-outline-secondary"
+									@click="toggleEditing(false)"
+								>
+									Cancel
+								</button>
+							</template>
+							<button
+								v-else
+								key="edit"
+								class="btn btn-light"
+								@click="toggleEditing(true)"
+							>
 								Edit
 							</button>
 						</div>
 					</div>
-					<p>
-						An epic project to support epic projects
-					</p>
-					<div class="row mb-3">
-						<small class="col">
-							<FontAwesomeIcon
-								icon="clock"
-								class="text-muted"
+					<div v-if="editing">
+						<div class="form-group">
+							<label for="project-description">Description</label>
+							<textarea
+								id="project-description"
+								v-model="project.description"
+								class="form-control"
+								name="project-description"
+								cols="30"
+								rows="3"
 							/>
-							by December 2020
-						</small>
+						</div>
+						<div class="form-row">
+							<div class="form-group col">
+								<label for="project-due-by">Due date</label>
+								<input
+									id="project-due-by"
+									v-model="form.dueBy"
+									type="date"
+									name="project-due-by"
+									class="form-control"
+									value="2020-12-31"
+								>
+							</div>
+						</div>
+					</div>
+					<div v-else>
+						<p>
+							{{ project.description }}
+						</p>
+						<div class="row mb-3">
+							<small class="col">
+								<FontAwesomeIcon
+									icon="clock"
+									class="text-muted"
+									title="Due by"
+									aria-label="Due by"
+								/>
+								{{ project.dueBy }}
+							</small>
+						</div>
 					</div>
 				</div>
 				<ul class="nav nav-underline">
@@ -286,12 +337,28 @@ export default {
 	data: () => ({
 		editing: false,
 		project: {
-			description: 'An epic project to support epic projects'
+			description: 'An epic project to support epic projects',
+			dueBy: '2020-12-31'
+		},
+		form: {
+			description: '',
+			dueBy: ''
 		}
 	}),
 	methods: {
 		toggleEditing(editing = !this.editing) {
 			this.editing = editing
+			if (editing) {
+				Object.keys(this.form).forEach(key => {
+					this.form[key] = this.project[key]
+				})
+			}
+		},
+		update() {
+			Object.keys(this.form).forEach(key => {
+				this.project[key] = this.form[key]
+			})
+			this.toggleEditing(false)
 		}
 	}
 
